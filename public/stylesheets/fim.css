@@ -1,0 +1,21 @@
+
+#aviso{
+  
+  margin-top: 25vh;
+  margin-bottom: 25vh;
+  text-align: center;
+}
+
+
+
+
+  @media (max-width: 650px) {
+  
+  
+  footer{
+  
+   padding: 2px;
+   
+}
+
+  }
