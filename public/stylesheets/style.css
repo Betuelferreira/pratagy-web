@@ -1,0 +1,188 @@
+#banner{
+background-size: cover;
+}
+
+#titulo{
+position: absolute;
+top: 500px;
+color:white;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Staatliches', cursive;
+
+}
+
+
+#sobrenos{
+
+background-color: #0571ff;
+padding-bottom: 60px;
+padding-top: 60px;
+
+height: 90%;
+/* margin-left: 5%; */
+
+}
+
+
+#txtnos{
+
+
+font-size: 1em;
+font-family: 'Anton', sans-serif;
+color: aliceblue;  
+margin-left: 279px;
+
+
+}
+
+/* #divvideo{
+
+margin-left: 10%;
+padding: 0%;
+width: 80%;
+height: 100%;
+
+
+ 
+} */
+
+#video{
+width: 80%;
+height: 250px;
+border: 10px;
+}
+
+
+
+#pnos{
+
+color: aliceblue;  
+width: 100%;
+height: 50%;
+padding-right: 20px;
+
+
+
+}
+
+#divtv{
+padding: 0%;
+width: 88%;
+
+}
+
+#mvv{
+padding: 70px;
+color: rgb(5, 113, 255);
+}
+
+
+#Imissao{
+
+padding: 5%;
+padding-top: 5px;
+
+}
+
+#Ivisao{
+
+padding: 5%;
+padding-top: 5px;
+
+}
+
+#Ivalores{
+
+
+padding: 5%;
+padding-top: 5px;
+
+}
+
+#linkM{
+color: rgb(255, 255, 255);
+}
+
+#acordian{
+
+padding: 10%;
+
+}
+
+#accordion1{
+
+width: 100%;
+display: flex;
+justify-content: space-evenly;
+
+}
+
+#a1{
+margin-left: 0%;
+border: 0;
+}
+
+#a2{
+margin-left: 30%;
+margin-right: 30%;
+border: 0;
+}
+
+#a3{
+margin-left: 0%;
+border: 0;
+
+}
+
+
+
+#txtA{
+color: #0571ff;
+text-align: center;
+}
+
+
+
+@media (max-width: 650px) {
+
+#divtv{
+
+ flex-direction: column;
+}
+
+#mvv{
+ flex-direction: column;
+ padding: 10%;
+}
+
+
+
+#video{
+
+ width: 100%;
+ height: 100%;
+}
+
+.accordion{
+ padding: 10%;
+ flex-direction: column;
+}
+
+#a2{
+
+ margin: 0;
+
+}
+
+#txtA{
+ color: #0571ff;
+ 
+}
+
+footer{
+
+ padding: 2px;
+ 
+}
+
+}
