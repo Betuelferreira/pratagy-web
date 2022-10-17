@@ -5,9 +5,10 @@ module.exports = function (app) {
         },
         logar: function (req, res) {
             //#1
-            let email = req.body.usuario.usuario;
-            let nome = req.body.usuario.nome;
-            if (email && nome) {
+            let email = req.body.usuario.email;
+            let senha = req.body.usuario.senha;
+            console.log(req.body)
+            if (email && senha) {
                 let usuario = req.body.usuario;
                 usuario["contatos"] = [];
                 req.session.usuario = usuario;
