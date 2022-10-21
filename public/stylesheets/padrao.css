@@ -1,12 +1,14 @@
 .navbar{
     background-color: rgb(0, 122, 253);  
-   padding: 0;
+    padding: 0;
   } 
 
   footer{
-
+    width: 100%;
     text-align: center;
     background-color: #0046a1;
     padding: 6px;
     color:#fff;
+    position: absolute;
+    bottom: 0;
     }
