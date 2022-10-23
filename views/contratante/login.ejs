@@ -34,19 +34,20 @@
             <img id="imglogin" src="../imagens/logo_pratagy.png" alt="">
             <h2>LOGIN</h2>
 
-            <div class="form">
+            <form action="/logar" method="post" class="form">
                 <div class="mb-3">
                     <label for="nome" class="form-label">Usuário</label>
-                    <input type="nome" class="form-control" id="nomeUser" placeholder="Usuário">
+                    <input name="usuario[email]" type="nome" class="form-control" id="nomeUser" placeholder="Usuário">
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Senha">
+                    <input name="usuario[senha]" type="password" class="form-control" id="exampleFormControlInput1" placeholder="Senha">
                 </div>
-            </div>
+                <button id="botão" type="submit">ENTRAR</button>
+            </form>
 
-            <a id="lbotão" href="../conclusão/fcadastro.html"><button id="botão" type="submit">ENTRAR</button></a>
+            <!-- <a id="lbotão" href="/perfil"><button id="botão" type="submit">ENTRAR</button></a> -->
 
         </div>
 

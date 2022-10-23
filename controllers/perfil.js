@@ -1,8 +1,10 @@
 module.exports=function(app){
     var PerfilController = {
         perfil:function (req, res) {
-            res.render("contratante/perfil");
-    },
+            let usuario = req.session.usuario;
+            let params = { usuario: usuario };
+            res.render("contratante/perfil", params);
+        },
     
     };
     return PerfilController;

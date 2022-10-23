@@ -1,18 +1,24 @@
-var express = require('express');
-var load = require ("express-load")
-var path = require ( "path")
+let express = require("express");
+let load = require("express-load");
+let bodyParser = require("body-parser");
+let cookieParser = require("cookie-parser");
+let expressSession = require("express-session"); 
+let path = require("path");
+let app = express();
 
 // var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
 
-var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
-
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(cookieParser('pratagy-web'));
+app.use(expressSession());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static(path.join(__dirname, "public")));
 
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);

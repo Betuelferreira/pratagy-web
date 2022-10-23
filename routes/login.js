@@ -1,5 +1,6 @@
 module.exports =
   function(app){
-      var log = app.controllers.login;
-        app.get("/login" , log.login);
+      let log = app.controllers.login;
+      app.get('/login', log.login);
+      app.post('/logar', log.logar);
   }

@@ -4,19 +4,17 @@ module.exports = function (app) {
             res.render("contratante/login");
         },
         logar: function (req, res) {
-            //#1
             let email = req.body.usuario.email;
             let senha = req.body.usuario.senha;
-            console.log(req.body)
             if (email && senha) {
                 let usuario = req.body.usuario;
-                usuario["contatos"] = [];
+                usuario["perfil"] = [];
                 req.session.usuario = usuario;
-                res.redirect("/contatos");
+                res.redirect("/perfil");
             } else {
-                res.redirect("/");
+                res.redirect("/login");
             }
         },
     };
     return LoginController;
-}
+};
