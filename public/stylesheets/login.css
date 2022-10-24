@@ -4,19 +4,6 @@ body {
     
 }
 
-.navbar {
-    background-color: #007afd;
-    padding: 0;
-}
-
-
-footer {
-
-    text-align: center;
-    background-color: #0046a1;
-    padding: 6px;
-    color: #fff;
-}
 
 #tcadastro {
     box-shadow: 1px 1px 10px 1px rgb(2, 2, 2);

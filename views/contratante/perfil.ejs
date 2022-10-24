@@ -29,6 +29,16 @@
 
     <%- include('../nav.ejs')%>
 
+    <form action="/vagas" method="post">
+        <input type="text" name="vaga[nome]" placeholder="Nome" />
+        <button type="submit">Cadastrar</button>
+    </form>
+<h2><%=usuario.email%></h2>
+    <% vagas.forEach(function(vaga, index) { %>
+        <%- vaga.nome %>
+        <a href="/vaga/<%- index %>">Detalhes</a>
+
+    <% }) %>
     <%- include('../footer.ejs')%>
             <script srv="./script.js" defer></script>
 

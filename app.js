@@ -3,6 +3,7 @@ let load = require("express-load");
 let bodyParser = require("body-parser");
 let cookieParser = require("cookie-parser");
 let expressSession = require("express-session"); 
+let methodOverride = require("method-override");
 let path = require("path");
 let app = express();
 
@@ -18,6 +19,7 @@ app.use(cookieParser('pratagy-web'));
 app.use(expressSession());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
 
 // app.use('/', indexRouter);
