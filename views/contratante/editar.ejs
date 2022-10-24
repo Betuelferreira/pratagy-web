@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar</title>
+</head>
+<body>
+    <form action="/vaga/<%- id %>?_method=put" method="post">
+        <label>Nome da Vaga:</label>
+        <input type="text" name="vaga[nome]" value="<%- vaga.nome %>" />
+        <button type="submit">Atualizar</button>
+    </form>
+</body>
+</html>

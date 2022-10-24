@@ -4,8 +4,7 @@ module.exports =
     app.get("/perfil", perf.perfil);
     app.get("/vaga/:id", perf.show);
     app.post("/vagas", perf.create);
-    // app.get("/perfil/:id/editar", perf.edit);
-    // app.put("/perfil/:id", perf.update);
-    // app.delete("/perfil/:id", perf.destroy);
-
+    app.get("/vaga/:id/editar", perf.edit);
+    app.put("/vaga/:id", perf.update);
+    app.delete("/vaga/:id", perf.destroy);
   }

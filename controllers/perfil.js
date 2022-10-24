@@ -16,21 +16,27 @@ module.exports = function (app) {
             var id = req.params.id,
             vaga = req.session.usuario.vagas[id],
             params = { vaga: vaga, id: id };
-            res.render("perfil/show", params);
+            res.render("contratante/vaga", params);
         },
-        // edit: function (req, res) {
-        //     var id = req.params.id,
-        //     usuario = req.session.usuario,
-        //     vaga = usuario.vagas[id],
-        //     params = { usuario: usuario, vaga: vaga, id: id };
-        //     res.render("perfil/edit", params);
-        //     },
-        // update: function (req, res) {
-        //     var vaga = req.body.vaga,
-        //     usuario = req.session.usuario;
-        //     usuario.vagas[req.params.id] = vaga;
-        //     res.redirect("/contatos");
-        //     },
+        edit: function (req, res) {
+            var id = req.params.id,
+            usuario = req.session.usuario,
+            vaga = usuario.vagas[id],
+            params = { usuario: usuario, vaga: vaga, id: id };
+            res.render("contratante/editar", params);
+            },
+        update: function (req, res) {
+            var vaga = req.body.vaga,
+            usuario = req.session.usuario;
+            usuario.vagas[req.params.id] = vaga;
+            res.redirect("/perfil");
+            },
+        destroy: function (req, res) {
+            var usuario = req.session.usuario,
+            id = req.params.id;
+            usuario.vagas.splice(id, 1);
+            res.redirect("/perfil");
+            },
     };
     return PerfilController;
 }
