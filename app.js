@@ -5,12 +5,11 @@ let cookieParser = require("cookie-parser");
 let expressSession = require("express-session"); 
 let methodOverride = require("method-override");
 let path = require("path");
+let error = require("./middlewares/error");
 let app = express();
 
 // var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
-
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -36,3 +35,8 @@ app.listen(3000,function(){
 });
 
 module.exports = app;
+
+load('models').then('controllers').then('routes').into(app);
+
+app.use(error.notFound);
+app.use(error.serverError)
