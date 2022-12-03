@@ -2,16 +2,23 @@ body {
     background-image: url("https://github.com/Betuelferreira/Site-Pratagy/blob/main/imagens/fundo.png?raw=true");
     background-repeat: no-repeat;
     background-size: 100%;
-    
 }
 
+footer {
+    text-align: center;
+    background-color: #0046a1;
+    padding: 6px;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    bottom: 0vh;
+}
 
 #tcadastro {
     box-shadow: 1px 1px 10px 1px rgb(2, 2, 2);
     margin-top: 10vh;
     margin-bottom: 5vh;
     width: 40%;
-    
     display: flex;
     flex-direction: column;
     align-items: center
@@ -19,7 +26,6 @@ body {
 
 #imglogin {
     margin-top: 15px;
-
 }
 
 h2 {
@@ -29,14 +35,11 @@ h2 {
     margin-bottom: 0px;
 }
 
-
 .form {
     width: 100%;
-
 }
 
 #botão {
-
     background-color: #007afd;
     width: 100%;
     height: 30px;
@@ -45,7 +48,6 @@ h2 {
     margin-bottom: 10px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     color: #fff;
-
 }
 
 #lbotão {
@@ -63,21 +65,12 @@ h2 {
 }
 
 @media (max-width: 650px) {
-
-
     footer {
-
         padding: 2px;
-
     }
-
     #tcadastro {
-
         width: 90%;
         height: 300px;
-
-
         align-items: center;
     }
-
 }
