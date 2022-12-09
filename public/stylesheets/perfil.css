@@ -1,64 +1,53 @@
-.navbar {
-    background-color: #007afd;
-    padding: 0;
-}
-
-#nav {
-    padding-left: 8vw;
-}
-
-#navbarSupportedContent {
-    padding-left: 35vw;
-}
-
 li {
     margin-left: 2vw;
 }
-h1{
+
+h1 {
     padding-top: 10px;
     text-align: center;
     font-size: 25px;
     color: #0046a1;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-#v{
+
+#v {
     padding-top: 5vh;
     font-size: 1.7em;
 }
 
-#vagas{
+#vagas {
     padding-top: 5vh;
 }
 
-#efetivo{
-
+#efetivo {
     border: black 1px solid;
     border-radius: 8px;
     width: 25%;
     height: 60vh;
     background-color: #ffffff;
 }
-#d1{
-    padding-top: 20px;
-}
-#d2{
-    padding-top: 20px;
-}
-#d3{
+
+#d1 {
     padding-top: 20px;
 }
 
-#estagio{
+#d2 {
+    padding-top: 20px;
+}
 
+#d3 {
+    padding-top: 20px;
+}
+
+#estagio {
     border: black 1px solid;
     border-radius: 8px;
     width: 25%;
     height: 60vh;
     background-color: #ffffff;
 }
-#aprendiz{
 
+#aprendiz {
     border: black 1px solid;
     border-radius: 8px;
     width: 25%;
