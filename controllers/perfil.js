@@ -9,7 +9,7 @@ module.exports = function (app) {
             var vaga = req.body.vaga,
             usuario = req.session.usuario;
             usuario.vagas.push(vaga);
-            console.log(usuario)
+            
             res.redirect("/perfil");
         },
         show: function (req, res) {
