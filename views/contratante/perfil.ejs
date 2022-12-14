@@ -33,12 +33,17 @@
         <div id="vagas" class="container-fluid d-flex">
             <div id="efetivo" class="container">
                 <h1>Efetivo</h1>
-                <form action="/perfil" method="post">
-                    <input type="text">
-                    <input type="button" value="Criar">
+                <form action="/vagas" method="post">
+                    <input name="vaga[nome]" placeholder="Nome" type="text">
+                    <button type="submit">Criar</button>
                     <!-- <input type="reset" value="cancelar"> -->
                 </form>
-
+                
+                <% vagas.forEach(function(vaga, index) { %>
+                    <%- vaga.nome %>
+                    <a href="/vaga/<%- index %>">Detalhes</a><br>
+                <% }) %>
+                
 
             </div>
 
