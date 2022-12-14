@@ -12,6 +12,21 @@ module.exports = function (app) {
             
             res.redirect("/perfil");
         },
+        create: function (req, res) {
+            var vagaD = req.body.vaga,
+            usuario = req.session.usuario;
+            usuario.vagas.push(vagaD);
+            
+            res.redirect("/perfil");
+        },
+        create: function (req, res) {
+            var vagaT = req.body.vaga,
+            usuario = req.session.usuario;
+            usuario.vagas.push(vagaT);
+            
+            res.redirect("/perfil");
+        },
+
         show: function (req, res) {
             var id = req.params.id,
             vaga = req.session.usuario.vagas[id],

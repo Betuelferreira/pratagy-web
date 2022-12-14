@@ -50,30 +50,32 @@
             <div id="estagio" class="container">
                 <h1>Estágio</h1>
                 <form>
-                    <input type="text" nome="vaga[Vaga]">
-                    <input type="button" value="Criar">
+                    <form action="/vagas2" method="post">
+                        <input name="vagaD[nome]" placeholder="Nome" type="text">
+                        <button type="submit">Criar</button>
+                        <!-- <input type="reset" value="cancelar"> -->
+                    </form>
+                    
+                    <% vagas.forEach(function(vaga, index) { %>
+                        <%- vagaD.nome %>
+                        <a href="/vaga/<%- index %>">Detalhes</a><br>
+                    <% }) %>
                 </form>
-
-
-
-                <div id="d2">
-                    <p>- Auxiliar de TI</p>
-                    <p>- Marketing</p>
-                    <p>- A&B</p>
-                </div>
 
             </div>
 
             <div id="aprendiz" class="container">
                 <h1>Aprendiz</h1>
-                <form>
-                    <input type="text">
-                    <input type="button" value="Criar">
+                <form action="/vagas3" method="post">
+                    <input name="vagaT[nome]" placeholder="Nome" type="text">
+                    <button type="submit">Criar</button>
+                    <!-- <input type="reset" value="cancelar"> -->
                 </form>
-                <div id="d3">
-                    <p>- Manutenção</p>
-                    <p>- Recepçaõ</p>
-                    <p>- Reservas</p>
+                
+                <% vagas.forEach(function(vaga, index) { %>
+                    <%- vagaT.nome %>
+                    <a href="/vaga/<%- index %>">Detalhes</a><br>
+                <% }) %>
 
                 </div>
             </div>
