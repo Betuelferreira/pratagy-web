@@ -50,14 +50,14 @@
             <div id="estagio" class="container">
                 <h1>Estágio</h1>
                 <form>
-                    <form action="/vagas2" method="post">
-                        <input name="vagaD[nome]" placeholder="Nome" type="text">
+                    <form action="/vagas" method="post">
+                        <input name="vaga[nome]" placeholder="Nome" type="text">
                         <button type="submit">Criar</button>
                         <!-- <input type="reset" value="cancelar"> -->
                     </form>
                     
                     <% vagas.forEach(function(vaga, index) { %>
-                        <%- vagaD.nome %>
+                        <%- vaga.nome %>
                         <a href="/vaga/<%- index %>">Detalhes</a><br>
                     <% }) %>
                 </form>
@@ -66,16 +66,18 @@
 
             <div id="aprendiz" class="container">
                 <h1>Aprendiz</h1>
-                <form action="/vagas3" method="post">
-                    <input name="vagaT[nome]" placeholder="Nome" type="text">
-                    <button type="submit">Criar</button>
-                    <!-- <input type="reset" value="cancelar"> -->
+                <form>
+                    <form action="/vagas" method="post">
+                        <input name="vaga[nome]" placeholder="Nome" type="text">
+                        <button type="submit">Criar</button>
+                        <!-- <input type="reset" value="cancelar"> -->
+                    </form>
+                    
+                    <% vagas.forEach(function(vaga, index) { %>
+                        <%- vaga.nome %>
+                        <a href="/vaga/<%- index %>">Detalhes</a><br>
+                    <% }) %>
                 </form>
-                
-                <% vagas.forEach(function(vaga, index) { %>
-                    <%- vagaT.nome %>
-                    <a href="/vaga/<%- index %>">Detalhes</a><br>
-                <% }) %>
 
                 </div>
             </div>
