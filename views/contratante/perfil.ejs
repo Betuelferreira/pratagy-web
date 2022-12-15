@@ -38,58 +38,58 @@
                     <button type="submit">Criar</button>
                     <!-- <input type="reset" value="cancelar"> -->
                 </form>
-                
+
                 <% vagas.forEach(function(vaga, index) { %>
                     <%- vaga.nome %>
-                    <a href="/vaga/<%- index %>">Detalhes</a><br>
-                <% }) %>
-                
+                        <a href="/vaga/<%- index %>">Detalhes</a><br>
+                        <% }) %>
+
 
             </div>
 
             <div id="estagio" class="container">
                 <h1>Estágio</h1>
                 <form>
-                    <form action="/vagas2" method="post">
-                        <input name="vagaD[nome]" placeholder="Nome" type="text">
+                    <form action="/vagas" method="post">
+                        <input name="vaga[nome]" placeholder="Nome" type="text">
                         <button type="submit">Criar</button>
                         <!-- <input type="reset" value="cancelar"> -->
                     </form>
-                    
+
                     <% vagas.forEach(function(vaga, index) { %>
-                        <%- vagaD.nome %>
-                        <a href="/vaga/<%- index %>">Detalhes</a><br>
-                    <% }) %>
-                </form>
+                        <%- vaga.nome %>
+                            <a href="/vaga/<%- index %>">Detalhes</a><br>
+                            <% }) %>
+
 
             </div>
 
             <div id="aprendiz" class="container">
                 <h1>Aprendiz</h1>
-                <form action="/vagas3" method="post">
-                    <input name="vagaT[nome]" placeholder="Nome" type="text">
+                <form action="/vagas" method="post">
+                    <input name="vaga[nome]" placeholder="Nome" type="text">
                     <button type="submit">Criar</button>
                     <!-- <input type="reset" value="cancelar"> -->
                 </form>
-                
+
                 <% vagas.forEach(function(vaga, index) { %>
-                    <%- vagaT.nome %>
-                    <a href="/vaga/<%- index %>">Detalhes</a><br>
-                <% }) %>
+                    <%- vaga.nome %>
+                        <a href="/vaga/<%- index %>">Detalhes</a><br>
+                        <% }) %>
 
-                </div>
             </div>
+        </div>
 
 
 
 
 
-            <footer>
-                <p> Copyright &copy; pratagy</p>
-            </footer>
-            <script srv=" ./script.js " defer></script>
+        <footer>
+            <p> Copyright &copy; pratagy</p>
+        </footer>
+        <script srv=" ./script.js " defer></script>
 
-            <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js " integrity=" sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8 " crossorigin=" anonymous "></script>
+        <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js " integrity=" sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8 " crossorigin=" anonymous "></script>
     </body>
 
 </html>
