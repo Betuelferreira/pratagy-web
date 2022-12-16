@@ -1,13 +1,13 @@
 module.exports = function(app) {
     var PerfilController = {
         perfil: function(req, res) {
-            let usuario = req.session.usuario;
-            let params = { usuario: usuario, vagas: usuario.vagas };
-            res.render("contratante/perfil", params);
+        let usuario = req.session.usuario;
+        let params = { usuario: usuario, vagas: usuario.vagas };
+        res.render("contratante/perfil", params);
         },
         create: function(req, res) {
             var vaga = req.body.vaga,
-                usuario = req.session.usuario;
+            usuario = req.session.usuario;
             usuario.vagas.push(vaga);
 
             res.redirect("/perfil");
@@ -15,8 +15,8 @@ module.exports = function(app) {
 
         show: function(req, res) {
             var id = req.params.id,
-                vaga = req.session.usuario.vagas[id],
-                params = { vaga: vaga, id: id };
+            vaga = req.session.usuario.vagas[id],
+            params = { vaga: vaga, id: id };
             res.render("contratante/vaga", params);
         },
         edit: function(req, res) {
