@@ -16,6 +16,12 @@ module.exports = function(app) {
                 res.redirect("/login");
             }
         },
+
+        logout: function(req, res){
+            req.session.destroy();
+            res.redirect("/login");
+
+        },       
     };
     return LoginController;
 };

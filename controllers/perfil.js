@@ -12,6 +12,7 @@ module.exports = function(app) {
 
             res.redirect("/perfil");
         },
+        
 
         show: function(req, res) {
             var id = req.params.id,
