@@ -30,7 +30,7 @@ load('models')
   .into(app);
 
 
-app.listen(3000,function(){
+app.listen(3000,() => {
   console.log("servidor rodando")
 });
 
