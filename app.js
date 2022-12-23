@@ -32,6 +32,7 @@ load('models')
 
 app.listen(3000,() => {
   console.log("servidor rodando")
+  
 });
 
 module.exports = app;
