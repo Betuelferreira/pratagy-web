@@ -31,7 +31,7 @@ load('models')
 
 
 app.listen(3000,() => {
-  console.log("servidor rodando")
+  console.log("servidor rodando http://localhost:3000")
   
 });
 
