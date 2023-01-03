@@ -1,4 +1,4 @@
-let express = require("express");
+const express = require("express");
 let load = require("express-load");
 let bodyParser = require("body-parser");
 let cookieParser = require("cookie-parser");
@@ -6,7 +6,7 @@ let expressSession = require("express-session");
 let methodOverride = require("method-override");
 let path = require("path");
 let error = require("./middlewares/error");
-let app = express();
+const app = express();
 
 // var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
