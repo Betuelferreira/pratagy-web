@@ -33,13 +33,13 @@
         <div id="vagas" class="container-fluid d-flex">
             <div id="efetivo" class="container">
                 <h1>Efetivo</h1>
-                <form action="/vagas" method="post">
+                <form action="/vagas/vagasEfetivado" method="post">
                     <input name="vaga[nome]" placeholder="Nome" type="text">
                     <button type="submit">Criar</button>
                     <!-- <input type="reset" value="cancelar"> -->
                 </form>
 
-                <% vagas.forEach(function(vaga, index) { %>
+                <% usuario.vagasEfetivado.forEach(function(vaga, index) { %>
                     <%- vaga.nome %>
                         <a href="/vaga/<%- index %>">Detalhes</a><br>
                         <% }) %>
@@ -49,14 +49,13 @@
 
             <div id="estagio" class="container">
                 <h1>Estágio</h1>
-                <form>
-                    <form action="/vagas" method="post">
+                    <form action="/vagas/vagasEstagio" method="post">
                         <input name="vaga[nome]" placeholder="Nome" type="text">
                         <button type="submit">Criar</button>
                         <!-- <input type="reset" value="cancelar"> -->
                     </form>
 
-                    <% vagas.forEach(function(vaga, index) { %>
+                    <% usuario.vagasEstagio.forEach(function(vaga, index) { %>
                         <%- vaga.nome %>
                             <a href="/vaga/<%- index %>">Detalhes</a><br>
                             <% }) %>
@@ -66,13 +65,13 @@
 
             <div id="aprendiz" class="container">
                 <h1>Aprendiz</h1>
-                <form action="/vagas" method="post">
+                <form action="/vagas/vagasAprendiz" method="post">
                     <input name="vaga[nome]" placeholder="Nome" type="text">
                     <button type="submit">Criar</button>
                     <!-- <input type="reset" value="cancelar"> -->
                 </form>
 
-                <% vagas.forEach(function(vaga, index) { %>
+                <% usuario.vagasAprendiz.forEach(function(vaga, index) { %>
                     <%- vaga.nome %>
                         <a href="/vaga/<%- index %>">Detalhes</a><br>
                         <% }) %>

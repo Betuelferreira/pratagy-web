@@ -6,15 +6,22 @@ module.exports = function(app) {
         res.render("contratante/perfil", params);
         },
         create: function(req, res) {
-            var vaga = req.body.vaga,
+            var vaga = req.body.vaga;
+            var tipo = req.params.tipo
+           
             usuario = req.session.usuario;
-            usuario.vagas.push(vaga);
+            if (tipo == "vagasEfetivado") usuario.vagasEfetivado.push(vaga); 
+            else if (tipo == "vagasEstagio") usuario.vagasEstagio.push(vaga);
+            else if (tipo == "vagasAprendiz") usuario.vagasAprendiz.push(vaga); 
+ 
+            
 
             res.redirect("/perfil");
         },
         
 
         show: function(req, res) {
+            
             var id = req.params.id,
             vaga = req.session.usuario.vagas[id],
             params = { vaga: vaga, id: id };

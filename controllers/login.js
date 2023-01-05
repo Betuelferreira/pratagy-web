@@ -8,7 +8,9 @@ module.exports = function(app) {
             let senha = req.body.usuario.senha;
             if (email && senha) {
                 let usuario = req.body.usuario;
-                usuario["vagas"] = [];
+                usuario["vagasEfetivado"] = [];
+                usuario["vagasEstagio"] = [];
+                usuario["vagasAprendiz"] = [];
                 console.log(usuario)
                 req.session.usuario = usuario;
                 res.redirect("/vagaCad");
