@@ -1,7 +1,9 @@
 module.exports=function(app){
     var HomeController = {
         index:function (req, res) {
-            res.render("home/index");
+           /*  let usuario = req.session.usuario;
+            let params = { usuario: usuario, vagas: usuario.vagas }; */ 
+            res.render("home/index", /* params */);
     },
     
     };
