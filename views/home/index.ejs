@@ -144,6 +144,17 @@
           data-bs-parent="#accordion1">
           <div class="accordion-body">
             
+            
+          
+         <% if(usuario){ %>
+
+              <% usuario.vagasEfetivado.forEach(function(vaga, index) { %>
+                <a href=""><%- vaga.nome %></a><br>
+                    
+                    <% }) %>
+              
+           <% } %>  
+            
             <!-- <ul>
               <li>
                 <a href="/cadastro">Garçom</a>
